@@ -1,0 +1,59 @@
+.site-skin-metadata {
+    content:"
+==============================================================
+
+                   ✿✿✿ Rosé Pine Moon Tags ✿✿✿
+                  Style A — Platonic Ships
+==============================================================
+SKIN METADATA
+==============================================================
+
+  - Skin:         Rosé Pine
+  - Add-on:       Tags - Style A — Platonic Ships (Moon)
+  - File:         tags_rosepinemoon_a_plat.css
+  - Author:       BlackBatCat
+  - Tumblr:       blackbatcats
+  - License:      MIT
+  - Updated:      2026-05-05 02:15 UTC
+  
+  - Repository:   https://github.com/Wolfbatcat/ao3-rose-pine
+  - Instructions: https://archiveofourown.org/works/69993411
+  
+  - Base:         'Rosé Pine' by BlackBatCat               https://archiveofourown.org/works/69993411
+  
+  - Inspired by:  'Archive 2.0 skin' by AO3                 https://archiveofourown.org/skins/873
+                  'Tide' by ElectricAlice                   https://github.com/electricalice/Ao3-tide
+                  'Flat Squares Skin' by milkfatzero        https://ao3-skins.dreamwidth.org/6156.html
+
+";}
+/*============================================================
+GLOBAL VARIABLES
+==============================================================
+NOTE: This version contains a seperate tag color for platonic ships. It is recommended that you use this with the Reorder Ship Tags userscript. 
+https://greasyfork.org/en/scripts/562812-ao3-reorder-ship-tags
+
+
+/*>========== TAG COLORS ==========<*/
+
+:root {
+  /* BACKGROUND */
+  --tag-default-bg:      #393757;
+  --tag-fandom-bg:       #eb6f92;
+  --tag-warning-bg:      #ebbcba;
+  --tag-ship-bg:         #ebbcba;
+  --tag-platonic-ship-bg: #9ccfd8;
+  --tag-character-bg:    #3e8fb0;
+  --tag-freeform-bg:     var(--tag-default-bg);
+}
+
+/*>========== STYLE OVERRIDES ==========<*/
+
+/* Special styling for platonic ships containing "*a* " */
+li.relationships:has(a[href*="%20*a*%20"]) a.tag,
+[class^="relationship"] a[href*="%20*a*%20"],
+[class^="relationship"] a[href^="/tags/Other%20Relationship%20Tags%20to%20Be%20Added"]{
+  background: var(--tag-platonic-ship-bg) !important;
+  color: var(--tag-ship-txt) !important;
+}
+
+
