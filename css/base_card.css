@@ -24,7 +24,7 @@ SKIN METADATA
   - Inspired by:  'Archive 2.0 skin' by AO3           https://archiveofourown.org/skins/873
                   'Tide' by ElectricAlice             https://github.com/electricalice/Ao3-tide
                   'Flat Squares Skin' by milkfatzero  https://ao3-skins.dreamwidth.org/6156.html
-";} 
+";}
 /*============================================================
  DIRECTORY
 ==============================================================
@@ -570,32 +570,28 @@ col.name {
 
 /* user profile icon */
 #header #greeting .dropdown>a[href*="/users/"] {
-    background-image: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/header/lw-icon-header-user.png");
+    content: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/header/lw-icon-header-user.png");
 }
 
 /* post new work icon */
 #header #greeting .dropdown>a[href*="/works/new"] {
-    background-image: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/header/lw-icon-header-new-work.png");
+    content: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/header/lw-icon-header-new-work.png");
 }
 
 /* log out icon */
 #header #greeting a[href*="/users/logout"] {
-    background-image: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/header/lw-icon-header-logout.png");
+    content: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/header/lw-icon-header-logout.png");
 }
 
-#header #greeting .dropdown>a[href*="/users/"],
-#header #greeting .dropdown>a[href*="/works/new"],
-#header #greeting a[href*="/users/logout"] {
-    display: inline-block;
-    box-sizing: content-box;
-    width: var(--greeting-icon-size);
-    height: var(--greeting-icon-size);
-    min-height: var(--greeting-icon-size);
-    min-width: var(--greeting-icon-size);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
+    #header #greeting .dropdown>a[href*="/users/"],
+    #header #greeting .dropdown>a[href*="/works/new"],
+    #header #greeting a[href*="/users/logout"] {
+        display: inline-block;
+        box-sizing: content-box;
+        height: var(--greeting-icon-size);
+        min-height: var(--greeting-icon-size);
+        min-width: var(--greeting-icon-size);
+    }
 
 #header #greeting>ul>li>a {
     display: inline-block;
@@ -2332,71 +2328,9 @@ li.picture.blurb,
     padding: 0;
     /* required for own mystery blurbs */
 }
-
-/*>========== BLURB HEADER LAYOUT ==========<*/
-
-.blurb .header:has(ul.required-tags) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0;
-}
-
-.blurb .header .heading {
-    margin: 0;
-}
-
-/* work title and author */
-.blurb .header h4.heading {
-    order: 1;
-    flex: 1;
-    box-sizing: border-box;
-    padding-right: 11ch;
-    font-size: 1.1em;
-    text-align: left;
-}
-
-/* reposition fandom tags below title */
-.blurb h5.fandoms.heading {
-    order: 4;
-    margin-top: 0.5em;
-}
-
-/* hide empty space on prompts without fandoms */
-.blurb h5.fandoms.heading:not(:has(a.tag)) {
-    height: 0;
-}
-
-/* reposition content rating icons */
-.blurb .header ul.required-tags {
-    order: 3;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 4px;
-    position: unset;
-    width: 100%;
-    margin-top: 0.429em;
-    padding-top: 0.643em;
-    border-top: var(--border-width) solid var(--border2);
-}
-
-/* reset positioning for content icons */
-.blurb ul.required-tags,
-.blurb ul.required-tags li,
-.blurb ul.required-tags li+li+li,
-.blurb ul.required-tags li+li+li+li,
-.blurb ul.required-tags li a {
-    position: unset;
-    width: unset;
-    height: unset;
-    margin: 0;
-    padding: 0;
-}
-
-.blurb .header p.notice {
-    order: 6;
-    width: 100%;
-    margin: 0.5em 0 0 0;
+.blurb .header {
+    border-bottom: 1px solid var(--border4);
+    padding-bottom: 0.5em;
 }
 
 /*>========== MODIFICATION: PICTURE ==========<*/
