@@ -2,26 +2,25 @@
     content: "
 ==============================================================
 
-                     ✿✿✿ Rosé Pine ✿✿✿                 
-           A Site Skin for the Archive of Our Own          
-                      By BlackBatCat   
+                    Rosé Pine Alternative
+           A Site Skin for the Archive of Our Own
+                      By Laughin6Whale
 
 ==============================================================
 SKIN METADATA
 ==============================================================
 
-  - Skin:         Rosé Pine (Card Layout)
+  - Skin:         Rosé Pine Alternative (Card Layout)
   - File:         base_card.css
-  - Author:       BlackBatCat
-  - Tumblr:       blackbatcats
+  - Author:       Laughin6Whale
   - License:      MIT
-  - Updated:      2026-06-16 05:40 UTC
+  - Updated:      2026-06-25
 
-  - Repository:   https://github.com/Wolfbatcat/ao3-rose-pine
+  - Repository:   https://github.com/Laughin6Whale/ao3-rose-pine-alternative
   - Instructions: https://archiveofourown.org/works/69993411
 
+  - Original:     'Rosé Pine' by Blackbatcat          https://github.com/Wolfbatcat/ao3-rose-pine
   - Base:         'neos' by ZerafinaCSS               https://archiveofourown.org/works/65849527
-
   - Inspired by:  'Archive 2.0 skin' by AO3           https://archiveofourown.org/skins/873
                   'Tide' by ElectricAlice             https://github.com/electricalice/Ao3-tide
                   'Flat Squares Skin' by milkfatzero  https://ao3-skins.dreamwidth.org/6156.html
@@ -71,7 +70,7 @@ Alphanumeric = Additions by ZerafinaCSS and other contributors
   --margins-header:      1rem;                /* header on desktop */
   --margins-main:        5%;                  /* site contents on desktop */
   --margins-narrow:      2.5%;                /* site contents and header on tablet/mobile */
-  --workskin-width:      70em;               /* max width of work content on desktop */
+  --workskin-width:      45em;               /* max width of work content on desktop */
 
   /* BLURB PADDING */
   --blurb-padding: 0.75em;
@@ -85,7 +84,7 @@ Alphanumeric = Additions by ZerafinaCSS and other contributors
   --radius-tag:          0 15px 15px;         /* tags */
 
   /* ICON BORDER-RADIUS */
-  --icon-content-radius: 0.75rem;             /* content and bookmark icon */
+  --icon-content-radius: 22.5%;               /* content and bookmark icon */
   --icon-primary-radius: 50%;                 /* primary and comment icon */
   --icon-index-radius:   0.75rem;             /* index icon */
 
@@ -93,9 +92,9 @@ Alphanumeric = Additions by ZerafinaCSS and other contributors
   --border-width:        1px;                 /* for almost all borders (experimental - changing this might cause some weirdness) */
 
   /* TEXT SIZE */
-  --txt-size-main:       100%;                /* main text size (bigger than 130% causes some issues, but is still mostly functional) */
-  --txt-size-work:       110%;                /* work text size */
-  --greeting-icon-size:  1.286em;             /* header greeting icon size */
+  --txt-size-main:       110%;                /* main text size (bigger than 130% causes some issues, but is still mostly functional) */
+  --txt-size-work:       115%;                /* work text size */
+  --greeting-icon-size:  1.3em;             /* header greeting icon size */
 
   /* TEXT BOLDNESS */
   --txt-semibold:        600;                 /* font-weight hover effect */
@@ -109,7 +108,6 @@ Alphanumeric = Additions by ZerafinaCSS and other contributors
   --greeting-icon-display: none;  /* set to "flex" to show the user avatar in the header */
   --splash-social-display: none;   /* set to "inline" to show the social share buttons on the splash page */
   --footer-display: inline;        /* set to "none" to hide the footer */
-
 
 }
 
@@ -135,12 +133,10 @@ span.unread,
 .replied,
 span.claimed,
 .actions span.defaulted,
-.splash .news .meta,
-.datetime,
 h5.fandoms.heading a.tag,
 dd.fandom.tags a,
 select {
-    font-family: Figtree, Bitter, Helvetica, "Trebuchet MS", "Lucida Sans", Arial, sans-serif, "GNU Unifont";
+    font-family: "SF Pro Text", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif, "GNU Unifont";
 }
 
 /* HEADINGS FONT FAMILY */
@@ -151,7 +147,7 @@ h4,
 h5,
 h6,
 .heading {
-    font-family: Figtree, Bitter, Helvetica, "Trebuchet MS", "Lucida Sans", Arial, sans-serif, "GNU Unifont";
+    font-family: "SF Pro Display", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif, "GNU Unifont";
     font-weight: var(--txt-bold);
 }
 
@@ -165,43 +161,31 @@ samp,
 textarea,
 textarea#skin_css,
 .css.module blockquote pre,
+.splash .news .meta,
+.splash .news .meta *,
+.datetime,
+.datetime *,
 #floaty-textarea {
-    font-family: Victor Mono Medium, Consolas, Monaco, Courier, monospace;
+    font-family: "SF Mono", Andale Mono, Consolas, Monaco, Courier, monospace;
     font-size: 0.9em;
-    /* font-style: italic; */
-    /* for cursive version of Victor Mono */
 }
 
 /* WORKSKIN FONT */
 #workskin *:not(kbd, tt, code, var, pre, samp) {
-    font-family: Figtree, Bitter, Helvetica, "Trebuchet MS", "Lucida Sans", Arial, sans-serif, "GNU Unifont";
+    font-family: "New York", Charter, Palatino, Baskerville, Cochin, serif;
 }
 
-/*>========== TEXT DECORATIONS ==========<*/
-/* don't forget to change the decoration in the mobile skin as well */
-
-/* TITLE DECORATIONS */
-#header .heading a::before {
-    content: "Archive of Our Own\00a0✿";
+/* WORKSKIN TEXT ALIGNMENT */
+#workskin .userstuff.module[role="article"] {
+    text-align: justify !important;
+    hyphens: auto;
 }
 
-/* HEADING DECORATIONS */
-#dashboard .current:after,
-.home .header h2::after,
-.splash>.module h3::after {
-    content: "\00a0✿";
-}
-
-/* TAG DECORATIONS */
-a.tag:not(.fandom.index.group a.tag,
-    h2.heading a.tag,
-    .splash .favorite a.tag,
-    h5.fandoms.heading a.tag,
-    dd.fandom.tags a,
-    [class^=warning] a.tag,
-    [class^=relationship] a,
-    [class^=character] a.tag):after {
-    content: "\00a0\00a0✿";
+/* WORKSKIN SUMMARY, NOTES, AND PREFACE ALIGNMENT */
+#workskin .summary .userstuff,
+#workskin .notes .userstuff,
+#workskin .preface .userstuff {
+    text-align: left !important;
 }
 
 /*============================================================
@@ -277,11 +261,6 @@ h2.heading a.tag:is(:hover, :focus),
     border-bottom-color: inherit;
     /* show underline on hover */
     color: var(--link-hgl);
-}
-
-a:visited,
-.blurb .heading a:visited {
-    color: var(--link-visited);
 }
 
 /* remove border on linked images */
@@ -427,8 +406,17 @@ col.name {
     color: transparent;
 }
 
-/* hide default "Archive of Our Own beta" text and logo */
-#header .heading a * {
+/* hide default "Archive of Our Own beta" text and recolor logo */
+#header .logo {
+    filter: var(--header-icon-hgl);
+}
+
+#header .logo:is(:hover, :focus) {
+    filter: var(--header-icon);
+}
+
+#header h1.heading a span,
+#header h1.heading a sup {
     display: none;
 }
 
@@ -577,17 +565,17 @@ col.name {
 
 /* user profile icon */
 #header #greeting .dropdown>a[href*="/users/"] {
-    content: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-header-icon-user.png");
+    content: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/header/lw-icon-header-user.png");
 }
 
 /* post new work icon */
 #header #greeting .dropdown>a[href*="/works/new"] {
-    content: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-header-icon-new-work.png");
+    content: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/header/lw-icon-header-new-work.png");
 }
 
 /* log out icon */
 #header #greeting a[href*="/users/logout"] {
-    content: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-header-icon-logout.png");
+    content: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/header/lw-icon-header-logout.png");
 }
 
 #header #greeting .dropdown>a[href*="/users/"],
@@ -3699,37 +3687,32 @@ img[src$="/images/skins/iconsets/default/icon_collection.png"] {
 img[src$="/images/skins/iconsets/default/rating-notrated.png"],
 img[src$="/images/skins/iconsets/default/category-none.png"],
 img[src$="/images/skins/iconsets/default/warning-no.png"] {
-    border: var(--border-width) solid var(--icon-border2) !important;
-    background: var(--icon-bg);
+    background: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/rating/lw-icon-rating-none.png");
 }
 
 /*>>========== RATING ==========<<*/
 
 .required-tags .rating-general-audience,
 img[src$="/images/skins/iconsets/default/rating-general-audience.png"] {
-    background: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-icon-rating-gen-01.png");
-    background-color: var(--icon-rating-gen);
+    background: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/rating/lw-icon-rating-gen.png");
 }
 
 .required-tags .rating-teen,
 img[src$="/images/skins/iconsets/default/rating-teen.png"] {
-    background: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-icon-rating-teen-01.png");
-    background-color: var(--icon-rating-teen);
+    background: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/rating/lw-icon-rating-teen.png");
     background-position: center 1px;
 }
 
 .required-tags .rating-mature,
 img[src$="/images/skins/iconsets/default/rating-mature.png"] {
-    background: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-icon-rating-mature-01.png");
-    background-color: var(--icon-rating-mature);
+    background: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/rating/lw-icon-rating-mature.png");
     background-size: 23px 23px !important;
     background-position: center;
 }
 
 .required-tags .rating-explicit,
 img[src$="/images/skins/iconsets/default/rating-explicit.png"] {
-    background: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-icon-rating-explicit-01.png");
-    background-color: var(--icon-rating-explicit);
+    background: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/rating/lw-icon-rating-explicit.png");
 }
 
 /*>>========== RELATIONSHIPS ==========<<*/
