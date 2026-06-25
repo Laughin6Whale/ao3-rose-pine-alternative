@@ -94,7 +94,7 @@ Alphanumeric = Additions by ZerafinaCSS and other contributors
   /* TEXT SIZE */
   --txt-size-main:       110%;                /* main text size (bigger than 130% causes some issues, but is still mostly functional) */
   --txt-size-work:       115%;                /* work text size */
-  --greeting-icon-size:  1.3em;             /* header greeting icon size */
+  --greeting-icon-size:  1.35em;             /* header greeting icon size */
 
   /* TEXT BOLDNESS */
   --txt-semibold:        600;                 /* font-weight hover effect */
@@ -261,6 +261,11 @@ h2.heading a.tag:is(:hover, :focus),
     border-bottom-color: inherit;
     /* show underline on hover */
     color: var(--link-hgl);
+}
+
+a:visited,
+.blurb .heading a:visited {
+    color: var(--link-visited);
 }
 
 /* remove border on linked images */
@@ -565,17 +570,17 @@ col.name {
 
 /* user profile icon */
 #header #greeting .dropdown>a[href*="/users/"] {
-    content: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/header/lw-icon-header-user.png");
+    background-image: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/header/lw-icon-header-user.png");
 }
 
 /* post new work icon */
 #header #greeting .dropdown>a[href*="/works/new"] {
-    content: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/header/lw-icon-header-new-work.png");
+    background-image: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/header/lw-icon-header-new-work.png");
 }
 
 /* log out icon */
 #header #greeting a[href*="/users/logout"] {
-    content: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/header/lw-icon-header-logout.png");
+    background-image: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/header/lw-icon-header-logout.png");
 }
 
 #header #greeting .dropdown>a[href*="/users/"],
@@ -583,9 +588,13 @@ col.name {
 #header #greeting a[href*="/users/logout"] {
     display: inline-block;
     box-sizing: content-box;
+    width: var(--greeting-icon-size);
     height: var(--greeting-icon-size);
     min-height: var(--greeting-icon-size);
     min-width: var(--greeting-icon-size);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 #header #greeting>ul>li>a {
@@ -3700,14 +3709,11 @@ img[src$="/images/skins/iconsets/default/rating-general-audience.png"] {
 .required-tags .rating-teen,
 img[src$="/images/skins/iconsets/default/rating-teen.png"] {
     background: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/rating/lw-icon-rating-teen.png");
-    background-position: center 1px;
 }
 
 .required-tags .rating-mature,
 img[src$="/images/skins/iconsets/default/rating-mature.png"] {
     background: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/rating/lw-icon-rating-mature.png");
-    background-size: 23px 23px !important;
-    background-position: center;
 }
 
 .required-tags .rating-explicit,
