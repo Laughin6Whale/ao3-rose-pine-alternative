@@ -3736,7 +3736,7 @@ img[src$="/images/skins/iconsets/default/complete-yes.png"] {
 
 .status .rec,
 img[src$="/images/skins/iconsets/default/bookmark-rec.png"] {
-    background: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-icon-bookmark-rec-01.png");
+    background: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/bookmark/lw-icon-bookmark-rec.png");
     background-color: var(--icon-content-rec);
 }
 
@@ -3746,7 +3746,7 @@ img[src$="/images/skins/iconsets/default/bookmark-rec.png"] {
 
 .status .public,
 img[src$="/images/skins/iconsets/default/bookmark-public.png"] {
-    background: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-icon-bookmark-public-02.png");
+    background: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/bookmark/lw-icon-bookmark-public.png");
     background-color: var(--icon-content-public);
 }
 
@@ -3756,7 +3756,7 @@ img[src$="/images/skins/iconsets/default/bookmark-public.png"] {
 
 .status .private,
 img[src$="/images/skins/iconsets/default/bookmark-private.png"] {
-    background: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-icon-bookmark-locked-02.png");
+    background: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/bookmark/lw-icon-bookmark-private.png");
     background-color: var(--icon-content-private);
     font-size: 0;
 }
@@ -3772,7 +3772,7 @@ img[src$="/images/skins/iconsets/default/bookmark-private.png"] {
 
 .status .hidden,
 img[src$="/images/skins/iconsets/default/bookmark-hidden.png"] {
-    background: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-icon-bookmark-hidden-01.png");
+    background: url("https://laughin6whale.github.io/ao3-rose-pine-alternative/assets/bookmark/lw-icon-bookmark-locked.png");
     background-color: var(--icon-content-hidden);
 }
 
